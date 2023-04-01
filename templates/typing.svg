@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <ellipse style="stroke: rgba(0, 0, 0, 0); fill: rgb(219, 238, 238);" cx="250" cy="215.318" rx="249.434" ry="147.934"/>
+  <path d="M -487.783 -517.831 Q -481.242 -595.107 -395.664 -517.831 L -346.258 -473.219 Q -260.68 -395.943 -352.799 -395.943 L -405.98 -395.943 Q -498.099 -395.943 -491.559 -473.219 Z" style="stroke: rgba(0, 0, 0, 0); fill: rgb(219, 238, 238);" transform="matrix(0.135236, 0.990813, 0.927229, -0.601093, 864.703979, 437.983429)" bx:shape="triangle -498.099 -595.107 237.419 199.164 0.071 0.388 1@7c4ee327"/>
+  <ellipse style="fill: rgb(216, 216, 216); stroke: rgba(0, 0, 0, 0);" cx="146.338" cy="220.174" rx="32.69" ry="32.454"/>
+  <ellipse style="fill: rgb(216, 216, 216); stroke: rgba(0, 0, 0, 0);" cx="246.042" cy="220.174" rx="32.69" ry="32.454"/>
+  <ellipse style="fill: rgb(216, 216, 216); stroke: rgba(0, 0, 0, 0);" cx="344.113" cy="220.174" rx="32.69" ry="32.454"/>
+</svg>
