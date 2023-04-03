@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div style="max-width: 800px; margin-right: auto; margin-left: auto;">
+        <h1>Text feed with {{ friend.username }}</h1>
+        <h2><a href="{% url 'message-list' %}">View all messages</a></h2>
+        <ul>
+        {% for msg in msgs %}
+            
+            {% if msg.sender == friend %}
+            <div class="message" style="background: #aaffaa">
+                <p>{{ msg.content }}</p>
+            </div>
+            {% else %}
+            <div class="message" style="background: #00aaff">
+                <p>{{ msg.content }}</p>
+            </div>
+            {% endif %}
+            
+        {% empty %}
+            <p style="color: grey;">Looks like you and {{ friend.username }} haven't send any messages yet</p>
+        {% endfor %}
+        </ul>
+
+        <form action="{% url 'message-create' friend.username %}" method="POST">
+            {% csrf_token %}
+            <input type="hidden" name="receiver" value="{{ friend.id }}">
+            <input type="text" name="content" placeholder="Type your message here">
+            <input type="submit" value="Send">
+    </div>
+    {% endblock %}

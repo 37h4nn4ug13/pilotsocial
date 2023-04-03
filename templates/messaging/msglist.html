@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>friends</h1>
+    <ul class="users-list">
+        {% for friend in friends %}
+      <li>
+        <a href="{% url 'text-feed' friend.username %}">
+        <div class="user-block">
+          <div class="user-info">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Default_pfp.svg" alt="Profile picture" class="profile-pic">
+            <h2 class="user-name">{{ friend.username }}</h2>
+            <p class="last-message">Hey, what's up?</p>
+          </div>
+          <div class="message-time">
+            <p class="time-sent">2 hours ago</p>
+          </div>
+        </div>
+    </a>
+      </li>
+      {% empty %}
+      <p>you have no friends</p>
+      {% endfor %}
+      
+    </ul>
+
+
+
+{% endblock content %}

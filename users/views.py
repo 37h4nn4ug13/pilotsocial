@@ -16,4 +16,7 @@ def user_login(request):
 
 
 def index(request) :
-    return HttpResponse("Home")
+    context = {
+        
+    }
+    return render(request, "index.html", context)
