@@ -4,8 +4,10 @@ from .models import Message
 from django.views.generic import DetailView
 from django.contrib.auth.models import User
 from django.shortcuts import redirect
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
+@login_required
 def allMsgs(request):
     # I need to get all of the friends of a user
     friends = Friend.get_friends(request.user)

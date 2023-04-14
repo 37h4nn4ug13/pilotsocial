@@ -129,7 +129,10 @@
           <li><a href="{% url 'home' %}" class="logo">Pilot</a></li>
           <li><a href="{% url 'message-list' %}">Messaging</a></li>
           <li><a href="#">Profile</a></li>
-          <li><a href="#">Logout</a></li>
+          <li><a href="{% url 'logout' %}">Logout</a></li>
+          {% if request.user.is_staff %}
+          <li><a href="{% url 'admin:index' %}">Admin</a></li>
+          {% endif %}
         </ul>
       </nav>
     </header>

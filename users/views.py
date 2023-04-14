@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def user_login(request): 
@@ -20,3 +21,9 @@ def index(request) :
         
     }
     return render(request, "index.html", context)
+
+
+@login_required
+def user_logout(request):
+    logout(request)
+    return redirect("login")
